@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=BAS\BAS.PrjMbd
+[Project2]
+ProjectPath=BAS_BaseGrid\BAS_BaseGrid.PrjPcb
