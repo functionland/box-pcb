@@ -1,4 +1,0 @@
-Record=TopLevelDocument|FileName=001_OverView.SchDoc|SheetNumber=1
-Record=SheetSymbol|SourceDocument=001_OverView.SchDoc|Designator=Ethernet|SchDesignator=Ethernet|FileName=051_EthernetConnections.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=051_EthernetConnections.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=001_OverView.SchDoc|Designator=Grid Position 1/8|SchDesignator=Grid Position 1/8|FileName=101_GridPos1.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=101_GridPos1.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
-Record=SheetSymbol|SourceDocument=001_OverView.SchDoc|Designator=Main Power|SchDesignator=Main Power|FileName=011_MainPower.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=011_MainPower.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
