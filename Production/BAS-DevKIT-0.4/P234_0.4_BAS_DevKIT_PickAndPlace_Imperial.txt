@@ -4,8 +4,8 @@ W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_
 ========================================================================================================================
 File Design Information:
 
-Date:       14/02/22
-Time:       21:50
+Date:       16/02/22
+Time:       21:22
 Revision:   Not in VersionControl
 Variant:    No variations
 Units used: mil
@@ -16,7 +16,7 @@ R218          BottomLayer 5029.528      3218.504      90       "10KO 5% 100mW"  
 R217          BottomLayer 5462.598      2480.315      90       "10KO 5% 100mW"                                                                   "WR06X103 JTL"         10KO            
 R216          BottomLayer 5531.496      2480.315      90       "10KO 5% 100mW"                                                                   "WR06X103 JTL"         10KO            
 "Logo GTS"    TopLayer    0.000         0.000         90       "Logo GTS 1"                                                                      ""                     GTS             
-MO401         TopLayer    2460.866      2362.205      270      "RPI ZeroW Pin 1-40"                                                              61304021121            ZeroW-1         
+MO401         TopLayer    2460.866      2362.205      270      "RPI ZeroW Header 1-40"                                                           9900002236265          ZeroW-1         
 MO406         TopLayer    0.000         0.000         270      "Outline of ZeroW"                                                                "RPI Zero W"           ZeroW           
 MO405         TopLayer    2460.630      3503.937      0        "RPI ZeroW Mounting Studs"                                                        9774030151R            ZeroW-M         
 MO404         TopLayer    1555.118      1220.472      0        "RPI ZeroW Mounting Studs"                                                        9774030151R            ZeroW-M         
@@ -70,8 +70,8 @@ R509          TopLayer    5728.346      5216.535      90       "150O 1% 100mW"  
 D506          TopLayer    5728.346      5374.016      90       "Led Green"                                                                       KP-2012CGCK            "Led Green"     
 R211          TopLayer    5905.512      1456.693      270      "150O 1% 100mW"                                                                   MCWR06X1500FTL         150O            
 D207          TopLayer    5846.457      1456.693      90       "Led Green"                                                                       KP-2012CGCK            "Led Green"     
-R210          TopLayer    6039.370      1803.150      0        "22KO 1% 62.5mW 100PPM"                                                           MCWR04X2202FTL         22KO            
-R209          TopLayer    5755.905      1622.047      270      "22KO 1% 62.5mW 100PPM"                                                           MCWR04X2202FTL         22KO            
+R210          TopLayer    6039.370      1803.150      0        "5.1KO 1% 62.5mW 100PPM"                                                          CRCW04025K10FKEDC      5.1kO           
+R209          TopLayer    5755.905      1622.047      270      "5.1KO 1% 62.5mW 100PPM"                                                          CRCW04025K10FKEDC      5.1kO           
 R508          TopLayer    5118.110      3641.732      90       "12KO 1% 62.5mW"                                                                  RC0402FR-1312KL        12KO            
 IC503         TopLayer    5220.472      3641.732      90       "RT9742 High side power switch"                                                   RT9742GGJ5             RT9742          
 CO503         TopLayer    5777.246      3661.968      90       "µSD-Card holder"                                                                 693071030811           µSD-Card        

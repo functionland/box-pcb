@@ -4,8 +4,8 @@ W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_
 ========================================================================================================================
 File Design Information:
 
-Date:       14/02/22
-Time:       21:50
+Date:       16/02/22
+Time:       21:22
 Revision:   Not in VersionControl
 Variant:    No variations
 Units used: mm
@@ -16,7 +16,7 @@ Units used: mm
 "R217","BottomLayer","138.7500","63.0000","90","10KO 5% 100mW","WR06X103 JTL","10KO"
 "R216","BottomLayer","140.5000","63.0000","90","10KO 5% 100mW","WR06X103 JTL","10KO"
 "Logo GTS","TopLayer","0.0000","0.0000","90","Logo GTS 1","","GTS"
-"MO401","TopLayer","62.5060","60.0000","270","RPI ZeroW Pin 1-40","61304021121","ZeroW-1"
+"MO401","TopLayer","62.5060","60.0000","270","RPI ZeroW Header 1-40","9900002236265","ZeroW-1"
 "MO406","TopLayer","0.0000","0.0000","270","Outline of ZeroW","RPI Zero W","ZeroW"
 "MO405","TopLayer","62.5000","89.0000","0","RPI ZeroW Mounting Studs","9774030151R","ZeroW-M"
 "MO404","TopLayer","39.5000","31.0000","0","RPI ZeroW Mounting Studs","9774030151R","ZeroW-M"
@@ -70,8 +70,8 @@ Units used: mm
 "D506","TopLayer","145.5000","136.5000","90","Led Green","KP-2012CGCK","Led Green"
 "R211","TopLayer","150.0000","37.0000","270","150O 1% 100mW","MCWR06X1500FTL","150O"
 "D207","TopLayer","148.5000","37.0000","90","Led Green","KP-2012CGCK","Led Green"
-"R210","TopLayer","153.4000","45.8000","0","22KO 1% 62.5mW 100PPM","MCWR04X2202FTL","22KO"
-"R209","TopLayer","146.2000","41.2000","270","22KO 1% 62.5mW 100PPM","MCWR04X2202FTL","22KO"
+"R210","TopLayer","153.4000","45.8000","0","5.1KO 1% 62.5mW 100PPM","CRCW04025K10FKEDC","5.1kO"
+"R209","TopLayer","146.2000","41.2000","270","5.1KO 1% 62.5mW 100PPM","CRCW04025K10FKEDC","5.1kO"
 "R508","TopLayer","130.0000","92.5000","90","12KO 1% 62.5mW","RC0402FR-1312KL","12KO"
 "IC503","TopLayer","132.6000","92.5000","90","RT9742 High side power switch","RT9742GGJ5","RT9742"
 "CO503","TopLayer","146.7421","93.0140","90","µSD-Card holder","693071030811","µSD-Card"
