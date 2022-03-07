@@ -5,3 +5,4 @@ Feedback is greatly appreciated for improvements of the design.
 
 - 25-01-2022: -Uploaded v0.2 of BAS_DevKIT files.
 - 16-02-2022: -Uploaded v0.4 of BAS_DevKIT files.
+- 07-03-2022: -Uploaded v0.5 of BAS_DevKIT PDF files.
