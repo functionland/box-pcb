@@ -12,3 +12,4 @@ File upload:
 - 16-02-2022: -Uploaded v0.4 of BAS_DevKIT files.
 - 07-03-2022: -Uploaded v0.5 of BAS_DevKIT files.
 - 04-04-2022: -Uploaded v0.1 of BAS_Tower1 files. (FuLa Tower)
+- 18-04-2022: -Uploaded mechanical drawings of PCB of BAS_Tower1.
