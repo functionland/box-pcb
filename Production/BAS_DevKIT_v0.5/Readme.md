@@ -1,1 +1,1 @@
-Production files for BAS_DevKIT v0.5
+BAS DevKIT v0.5 production files
