@@ -1,0 +1,250 @@
+Altium Designer Pick and Place Locations
+W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_Tower1_0.3\P234_BAS_Tower1_0.3_Pick Place\P234_0.3_Tower1_PickAndPlace_Metric.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       11/05/22
+Time:       17:03
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator     Layer       Center-X(mm) Center-Y(mm) Rotation Description                                                                                        ManfactPart            RefVal        
+IC6            BottomLayer 224.0000     71.0250      90       "3.3 V, 2 differential channel, 2 : 1 multiplexer/demultiplexer switch"                            CBTL02043A             CBTL02043A    
+C45            TopLayer    220.0000     70.2750      270      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C44            BottomLayer 222.7500     75.0000      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C43            BottomLayer 224.7500     67.0000      0        "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+R209           TopLayer    95.0000      93.7000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R212           TopLayer    112.0000     93.7000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+IC203          TopLayer    117.0000     93.0000      270      "USB Type-C and USB PD Controller with Integrated Power Switches Optimized for Power Applications" TPS25750D              TPS25750D     
+IC202          TopLayer    100.0000     93.0000      270      "USB Type-C and USB PD Controller with Integrated Power Switches Optimized for Power Applications" TPS25750D              TPS25750D     
+IC301          BottomLayer 114.5000     75.0000      270      "3.3 V, 2 differential channel, 2 : 1 multiplexer/demultiplexer switch"                            CBTL02043A             CBTL02043A    
+IC302          BottomLayer 131.5000     75.0000      270      "3.3 V, 2 differential channel, 2 : 1 multiplexer/demultiplexer switch"                            CBTL02043A             CBTL02043A    
+C257           BottomLayer 104.5000     91.2250      90       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C252           BottomLayer 115.8000     98.2500      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C260           TopLayer    96.7000      85.0000      180      "22µF 63V 20% X7R"                                                                                 KRM55WR71J226MH01K     22µF          
+C254           BottomLayer 110.0000     91.8500      90       "4.7µF 100V 10% X5R"                                                                               HMK325BJ475KM-PE       4.7µF         
+C258           BottomLayer 103.0000     91.2250      90       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C240           TopLayer    103.7000     96.4000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C253           TopLayer    122.3000     95.0000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C263           TopLayer    113.7000     85.0000      180      "22µF 63V 20% X7R"                                                                                 KRM55WR71J226MH01K     22µF          
+C249           BottomLayer 123.5750     87.8750      45       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C243           TopLayer    105.3000     95.0000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C242           BottomLayer 98.8000      98.2500      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C255           BottomLayer 107.5000     91.2250      90       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C250           TopLayer    120.7000     96.4000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C302           BottomLayer 113.7500     79.0000      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C245           TopLayer    122.5500     88.8750      45       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C251           TopLayer    118.5250     97.9500      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C306           BottomLayer 135.2000     76.0000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C304           BottomLayer 130.7500     79.0000      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C305           BottomLayer 130.7500     71.0000      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C301           BottomLayer 118.2000     76.0000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C303           BottomLayer 113.7500     71.0000      180      "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C247           BottomLayer 126.5750     84.8750      45       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C259           BottomLayer 103.2750     73.4750      270      "10µF 63V 10% X7R"                                                                                 CL32B106KMVNNWE        10µF          
+C262           BottomLayer 120.2750     73.4750      270      "10µF 63V 10% X7R"                                                                                 CL32B106KMVNNWE        10µF          
+C248           BottomLayer 125.0750     86.3750      45       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C244           TopLayer    124.7250     87.5750      45       "4.7µF 100V 10% X5R"                                                                               HMK325BJ475KM-PE       4.7µF         
+C256           BottomLayer 106.0000     91.2250      90       "10nF 50V 10% X7R"                                                                                 C0805C103K5RAC         10nF          
+C241           TopLayer    101.5250     97.9500      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+R20            BottomLayer 233.8000     93.5000      90       "150KO 1% 62.5mW 100PPM"                                                                           SFR01MZPF1503          150KO         
+R19            BottomLayer 233.0500     93.5000      270      "68KO 1% 62.5mW 100PPM"                                                                            CRG0402F68K            68KO          
+R18            BottomLayer 235.3000     93.5000      90       "150KO 1% 62.5mW 100PPM"                                                                           SFR01MZPF1503          150KO         
+R17            BottomLayer 234.5500     93.5000      270      "68KO 1% 62.5mW 100PPM"                                                                            CRG0402F68K            68KO          
+R16            BottomLayer 232.3000     93.5000      90       "200KO 1% 62.5mW 100PPM"                                                                           CRG0402F200K           200KO         
+R15            TopLayer    231.6000     85.7000      0        "5.1KO 1% 62.5mW 100PPM"                                                                           CRCW04025K10FKEDC      5.1kO         
+R14            TopLayer    230.1000     88.9000      135      "5.1KO 1% 62.5mW 100PPM"                                                                           CRCW04025K10FKEDC      5.1kO         
+H5             TopLayer    250.5000     93.5000      0        "Mounting Hole M3"                                                                                 ""                     "Hole M3"     
+R13            TopLayer    230.4250     94.8500      270      "1KO 5% 62.5mW 100PPM"                                                                             RC0402JR-131KL         1KO           
+R12            TopLayer    229.6250     94.8500      270      "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R214           BottomLayer 165.1000     77.2160      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R213           TopLayer    150.8000     82.2000      0        "2.2KO 1% 62.5mW 100PPM"                                                                           CRGCQ0402F2K2          2.2KO         
+PP208          BottomLayer 182.8800     68.5800      270      Programmingpoint                                                                                   ""                     PP            
+PP207          BottomLayer 180.3400     68.5800      270      Programmingpoint                                                                                   ""                     PP            
+PP206          BottomLayer 182.8800     73.6600      270      Programmingpoint                                                                                   ""                     PP            
+PP205          BottomLayer 182.8800     71.1200      270      Programmingpoint                                                                                   ""                     PP            
+PP204          BottomLayer 180.3400     73.6600      270      Programmingpoint                                                                                   ""                     PP            
+PP203          BottomLayer 180.3400     76.2000      270      Programmingpoint                                                                                   ""                     PP            
+PP202          BottomLayer 182.8800     76.2000      270      Programmingpoint                                                                                   ""                     PP            
+PP201          BottomLayer 180.3400     71.1200      270      Programmingpoint                                                                                   ""                     PP            
+IC204          BottomLayer 166.3000     71.8750      180      "8-Kbit serial SPI bus EEPROM with high-speed clock"                                               M95080-WMN6TP          M95080        
+C246           BottomLayer 169.7750     74.3250      270      "100nF 16V 10% X7R"                                                                                GCM155R71C104KA55D     100nF         
+D4             BottomLayer 220.0000     71.0250      90       "USB 3 TVS Diode"                                                                                  PUSB3FA2Z              TVS           
+D3             BottomLayer 234.7500     72.0000      0        "USB 2 TVS Diode"                                                                                  TPD2EUSB30DRTR         TVS           
+D2             TopLayer    221.5000     81.9500      90       "USB 3 TVS Diode"                                                                                  PUSB3FA2Z              TVS           
+D1             TopLayer    245.2250     75.0000      270      "USB 2 TVS Diode"                                                                                  TPD2EUSB30DRTR         TVS           
+C202           BottomLayer 147.2750     62.2750      315      "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C201           BottomLayer 156.1000     85.2750      90       "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C104           TopLayer    152.0000     97.5000      90       "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C103           TopLayer    149.0000     97.5000      90       "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+D304           TopLayer    135.0000     75.0000      270      "USB 3 TVS Diode"                                                                                  PUSB3FA2Z              TVS           
+D303           TopLayer    118.0000     75.0000      270      "USB 3 TVS Diode"                                                                                  PUSB3FA2Z              TVS           
+D302           TopLayer    128.0000     75.0000      90       "USB 2 TVS Diode"                                                                                  TPD2EUSB30DRTR         TVS           
+D301           TopLayer    111.0000     75.0000      90       "USB 2 TVS Diode"                                                                                  TPD2EUSB30DRTR         TVS           
+TR2            TopLayer    226.6000     92.2000      180      "30V, N-channel Trench MOSFET"                                                                     FDMS7660               FDMS7660      
+TR1            TopLayer    221.0000     92.2000      180      "30V, N-channel Trench MOSFET"                                                                     FDMS7660               FDMS7660      
+COG1           BottomLayer 234.7500     74.7500      0        "USB C connector Plug"                                                                             USB4151-GF-C           USB4151       
+Fid8           BottomLayer 61.0000      99.0000      180      "Fiducial Sqaure 1mm"                                                                              ""                     Fiducial      
+Fid7           BottomLayer 253.0000     54.0000      180      "Fiducial Sqaure 1mm"                                                                              ""                     Fiducial      
+Fid6           BottomLayer 202.0000     54.0000      180      "Fiducial Round 1mm"                                                                               ""                     Fiducial      
+Fid5           BottomLayer 216.0000     96.0000      180      "Fiducial Round 1mm"                                                                               ""                     Fiducial      
+C230           TopLayer    155.2000     69.9000      135      "180nF 10V 10% X5R"                                                                                GRM155R61A184KE19D     180nF         
+X201           TopLayer    154.4000     81.7000      225      "24MHz 4pF 20PPM"                                                                                  403WF24012IM           24MHz         
+R208           TopLayer    160.0000     73.0000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R207           TopLayer    160.0000     75.0000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R206           TopLayer    160.0000     77.0000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R205           TopLayer    160.0000     79.0000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R204           TopLayer    160.0000     74.0000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R203           TopLayer    160.0000     76.0000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R202           TopLayer    160.0000     78.0000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R201           TopLayer    160.0000     80.0000      0        "10KO 1% 62.5mW"                                                                                   WR04X1002FTL           10KO          
+R110           TopLayer    68.4000      80.8000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R109           TopLayer    166.6000     95.9000      0        "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R108           TopLayer    68.4000      78.8000      180      "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R107           TopLayer    160.1000     85.9000      0        "0O 100mW"                                                                                         WR06X0000FTL           0O            
+R106           TopLayer    152.8000     93.2000      180      "10KO 5% 100mW"                                                                                    "WR06X103 JTL"         10KO          
+R105           TopLayer    159.6000     88.0000      90       "2.2KO 5% 62.5mW"                                                                                  "MCMR04X222 JTL"       2.2KO         
+R104           TopLayer    160.4000     88.0000      90       "2.2KO 5% 62.5mW"                                                                                  "MCMR04X222 JTL"       2.2KO         
+R103           TopLayer    86.7500      60.3750      90       "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R102           TopLayer    68.4000      76.8000      0        "150O 1% 100mW"                                                                                    MCWR06X1500FTL         150O          
+R101           TopLayer    75.0001      78.2000      0        "12KO 1% 62.5mW"                                                                                   RC0402FR-1312KL        12KO          
+R11            TopLayer    134.6000     88.5000      90       "2.2KO 1% 62.5mW 100PPM"                                                                           CRGCQ0402F2K2          2.2KO         
+R8             TopLayer    135.2000     90.0000      180      "20KO 1% 100mW 100PPM"                                                                             ERJ-S02F2002X          20KO          
+R6             TopLayer    138.7000     90.5000      90       "12KO 1% 62.5mW"                                                                                   RC0402FR-1312KL        12KO          
+R5             TopLayer    127.8000     89.7000      90       "100O 1% 100mW"                                                                                    WR06X1000FTL           100O          
+R3             TopLayer    234.0000     93.0000      90       "100KO 1% 62.5mW 100PPM"                                                                           AC0402FR-13100KL       100KO         
+L2             TopLayer    131.6000     95.8000      0        "3.3µH 5A 30% 21mO"                                                                                SRN6045TA-3R3Y         "3.3µH 5A"    
+J104           TopLayer    204.9200     93.9000      270      "Header 1x2P"                                                                                      G800W306018EU          Header        
+J103           TopLayer    202.3800     93.9000      270      "Header 1x2P"                                                                                      G800W306018EU          Header        
+J102           TopLayer    199.8400     93.9000      270      "Header 1x2P"                                                                                      G800W306018EU          Header        
+J101           TopLayer    197.3000     93.9000      90       "Header 1x2P"                                                                                      G800W306018EU          Header        
+IC103          TopLayer    120.3000     65.3001      90       RT9742SNGV                                                                                         RT9742SNGV             RT9742        
+IC102          TopLayer    162.9000     96.8000      270      "Buffer IC"                                                                                        SN74LVC1G07DBVT        SN74LVC1G07D  
+IC101          TopLayer    75.0000      75.5000      0        "RT9742 High side power switch"                                                                    RT9742GGJ5             RT9742        
+IC2            TopLayer    131.4000     87.9000      0        "3.8V TO 40V INPUT, 5A LOW IQ SYNCHRONOUS BUCK WITH PROGRAMMABLE SOFT-START TIME"                  AP64501SP-13           AP64501SP-13  
+IC1            TopLayer    234.2000     90.6000      90       "USB-interface IC USB TYPE-C POWER DELIVERY"                                                       BD93E11GWL             BD93E11GWL    
+D204           TopLayer    198.0000     64.0000      0        "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D203           TopLayer    198.0000     66.0000      0        "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D202           TopLayer    198.0000     68.0000      0        "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D201           TopLayer    198.0000     70.0000      0        "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D106           TopLayer    64.6000      80.8000      180      "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D105           TopLayer    167.0000     97.9000      0        "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D104           TopLayer    64.6000      78.8000      180      "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D103           TopLayer    175.2000     61.3250      0        "USB 2 TVS Diode"                                                                                  TPD2EUSB30DRTR         TVS           
+D102           TopLayer    86.7500      64.1750      90       "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+D101           TopLayer    64.6000      76.8000      180      "Led Green"                                                                                        KP-2012CGCK            "Led Green"   
+CO302          TopLayer    125.0000     75.0000      270      USB4070-30-C                                                                                       USB4070-30-C           USB4070       
+CO301          TopLayer    108.0000     75.0000      270      USB4070-30-C                                                                                       USB4070-30-C           USB4070       
+CO1            TopLayer    250.0750     75.0000      90       "USB C connector"                                                                                  USB4500-03-1-A         USB-C         
+C233           TopLayer    155.8000     80.3000      45       "4pF 50V 0.25pF C0H"                                                                               UMK105CH040CVHF        4pF           
+C232           TopLayer    153.0000     83.1000      45       "4pF 50V 0.25pF C0H"                                                                               UMK105CH040CVHF        4pF           
+C231           TopLayer    146.3250     69.6750      45       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C229           TopLayer    145.5250     70.4750      45       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C227           TopLayer    143.9000     72.3000      45       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C226           TopLayer    143.1000     73.1000      45       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C225           TopLayer    142.0000     78.5000      0        "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C224           TopLayer    142.0000     79.4000      0        "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C223           TopLayer    145.3000     82.3250      0        "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C222           TopLayer    145.3000     83.2250      0        "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C221           BottomLayer 155.2127     80.2127      45       "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C220           BottomLayer 156.8250     69.9500      315      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C219           BottomLayer 155.8750     69.0500      315      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C218           BottomLayer 145.2500     68.5250      225      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C217           BottomLayer 144.3250     69.3750      225      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C216           BottomLayer 142.6750     71.0750      225      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C215           BottomLayer 143.7250     79.5750      135      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C214           BottomLayer 144.6250     80.4750      135      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C213           BottomLayer 146.2750     82.2000      135      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C212           BottomLayer 150.0000     65.0000      270      "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C211           BottomLayer 154.3750     81.0000      45       "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C210           BottomLayer 153.4750     81.9000      45       "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C209           BottomLayer 157.0000     71.3750      315      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C208           BottomLayer 154.5000     68.7750      315      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C207           BottomLayer 146.5250     68.2250      225      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C206           BottomLayer 144.0000     70.7250      225      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C205           BottomLayer 143.2000     78.3750      135      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C204           BottomLayer 145.9500     80.7750      135      "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C203           BottomLayer 150.0000     84.0000      90       "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C111           TopLayer    119.8000     63.0000      0        "100nF 16V 10% X7R"                                                                                GCM155R71C104KA55D     100nF         
+C110           TopLayer    119.8000     67.6000      0        "100nF 16V 10% X7R"                                                                                GCM155R71C104KA55D     100nF         
+C107           TopLayer    159.0000     96.5000      90       "1µF 16V 10% X5R"                                                                                  C1608X5R1C105K080AA    1µF           
+C106           TopLayer    157.5000     96.5000      90       "10µF 16V 20% X5R"                                                                                 GRM188R61C106MAALD     10µF          
+C105           TopLayer    155.0000     97.5000      90       "47µF 16V 20% X5R"                                                                                 EMK325ABJ476MM8P       47µF          
+C102           TopLayer    74.3001      72.6000      0        "10µF 16V 20% X5R"                                                                                 GRM188R61C106MAALD     10µF          
+C101           TopLayer    72.6001      76.1000      270      "10µF 16V 20% X5R"                                                                                 GRM188R61C106MAALD     10µF          
+C33            TopLayer    136.7000     90.5000      90       "1.2nF 50V 10% X7R"                                                                                GCM155R71H122KA37D     1.2nF         
+C32            TopLayer    135.2000     91.0000      0        "1nF 50V 1% C0G"                                                                                   GRT1555C1H102FA02D     1nF           
+C24            TopLayer    134.6000     85.9000      90       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C23            TopLayer    130.8006     81.9001      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C22            TopLayer    133.4006     81.9001      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C21            TopLayer    136.1006     85.0000      90       "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C20            TopLayer    138.0000     85.0000      90       "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C19            TopLayer    140.0000     85.0000      90       "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C18            TopLayer    142.0000     85.0000      90       "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C17            TopLayer    139.9000     90.5000      270      "1nF 50V 1% C0G"                                                                                   GRT1555C1H102FA02D     1nF           
+C16            TopLayer    141.8000     96.8000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C15            TopLayer    138.0000     96.8000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C14            TopLayer    139.9000     96.8000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C13            TopLayer    136.1000     96.8000      90       "10µF 16V 10% X5R"                                                                                 GRM21BR61C106KE15L     10µF          
+C9             TopLayer    127.8000     85.9000      270      "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C8             TopLayer    232.8000     87.0000      270      "10pF 50V 5% C0G"                                                                                  CC0402JRNPO9BN100      10pF          
+C7             TopLayer    233.8000     87.0000      270      "4.7µF 16V 10% X5R"                                                                                C1608X5R1C475K080AC    4.7µF         
+C6             TopLayer    235.0000     87.0000      270      "4.7µF 16V 10% X5R"                                                                                C1608X5R1C475K080AC    4.7µF         
+C5             TopLayer    239.8000     88.3000      270      "1µF 100V 15% X7R"                                                                                 GRM32ER72A105KA01      1µF           
+C4             TopLayer    242.7000     88.3000      270      "10µF 63V 10% X7R"                                                                                 GRM32ER71J106KA12      10µF          
+C3             TopLayer    237.0000     86.8000      270      "1µF 100V 15% X7R"                                                                                 GRM32ER72A105KA01      1µF           
+C2             TopLayer    232.2000     94.4000      90       "1µF 100V 15% X7R"                                                                                 GRM32ER72A105KA01      1µF           
+C1             TopLayer    238.1000     92.7000      0        "1µF 100V 15% X7R"                                                                                 GRM32ER72A105KA01      1µF           
+C39            TopLayer    223.0000     65.7500      0        "22µF 10V 20% X5R"                                                                                 0805ZD226MAT2A         22µF          
+C38            TopLayer    221.0000     55.7500      180      "22µF 10V 20% X5R"                                                                                 0805ZD226MAT2A         22µF          
+R10            TopLayer    101.7000     66.8250      180      "100KO 1% 100mW"                                                                                   RC0603FR-07100KL       100KO         
+R9             TopLayer    97.4000      69.4250      0        "2.94KO 1% 100mW 100PPM"                                                                           CRCW06032K94FKEA       2.94KO        
+R7             TopLayer    101.0000     71.6250      90       "31.2KO 0.5% 62.5mW 25PPM"                                                                         RN731ETTP3122D25       31.2KO        
+L4             TopLayer    207.1500     63.2500      90       "12µH 1.3A 20% 135mO"                                                                              ASPI-4030S-120M-T      "12µH 1.3A"   
+L1             TopLayer    91.0000      71.9250      90       "3.3µH 5A 30% 21mO"                                                                                SRN6045TA-3R3Y         "3.3µH 5A"    
+IC4            TopLayer    206.6500     75.2500      90       "Non-Isolated DC/DC Converters 3.3V 500MA"                                                         R-78E3.3-0.5           R-78E3.3-0.5  
+IC3            TopLayer    94.8000      64.2250      0        "DC-DC Switching Synchronous Buck Regulator, Adjustable, 3.8V-40Vin, 0.8V-40V/3.5A out"            AP64351QSP-13          AP64351QSP-13 
+C42            TopLayer    205.2000     82.3000      0        "22µF 10V 20% X5R"                                                                                 0805ZD226MAT2A         22µF          
+C41            TopLayer    205.1500     67.2500      180      "4.7µF 100V 10% X5R"                                                                               HMK325BJ475KM-PE       4.7µF         
+C40            TopLayer    203.1500     63.2500      90       "10µF 63V 10% X7R"                                                                                 CL32B106KMVNNWE        10µF          
+C35            TopLayer    99.4000      70.2250      90       "3.3nF 50V 10% X7R"                                                                                CC0603KRX7R9BB332      3.3nF         
+C34            TopLayer    95.4000      70.2250      90       "47pF 50V 5% C0G"                                                                                  CC0603JRNPO9BN470      47pF          
+C31            TopLayer    98.2000      62.3250      90       "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+C30            TopLayer    93.1472      59.1235      180      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C29            TopLayer    96.7517      58.0722      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C28            TopLayer    99.3768      58.0722      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C27            TopLayer    102.0269     58.0722      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C26            TopLayer    104.6770     58.0722      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C25            TopLayer    107.3022     58.0722      270      "10µF 35V 10% X5R"                                                                                 C2012X5R1V106K125AC    10µF          
+C12            TopLayer    98.6000      73.7250      270      "22µF 10V 20% X5R"                                                                                 0805ZD226MAT2A         22µF          
+C11            TopLayer    96.8000      73.7250      270      "22µF 10V 20% X5R"                                                                                 0805ZD226MAT2A         22µF          
+C10            TopLayer    91.2000      64.2250      270      "100nF 50V 10% X7R"                                                                                CGA2B3X7R1H104K050BB   100nF         
+L3             TopLayer    221.0000     60.7500      90       "10µH 3.2A 30% 52mO"                                                                               SRN6045TA-100M         "10µH 3.2A"   
+IC5            TopLayer    226.0000     58.7500      270      "NON-ISOLATED DC SWITCHING REGULATOR"                                                              VXO7803-500            VXO7803-500   
+C37            TopLayer    228.0000     65.7500      180      "10µF 63V 10% X7R"                                                                                 GRM32ER71J106KA12      10µF          
+C36            TopLayer    241.0000     63.0000      270      "680µF 50V 20%"                                                                                    UPW1H681MHD6           680µF         
+C228           TopLayer    154.6000     69.3000      135      "180nF 10V 10% X5R"                                                                                GRM155R61A184KE19D     180nF         
+IC201          TopLayer    150.0000     75.0000      135      "USB-interface IC PCI-e USB3.0 Host Ctrl 3rd Gen"                                                  UPD720201K8-701-BAC-A  UPD720201     
+H4             TopLayer    250.5000     56.5000      0        "Mounting Hole M3"                                                                                 ""                     "Hole M3"     
+H3             TopLayer    63.5000      96.5000      0        "Mounting Hole M3"                                                                                 ""                     "Hole M3"     
+H2             TopLayer    63.5000      53.5000      0        "Mounting Hole M3"                                                                                 ""                     "Hole M3"     
+H1             TopLayer    206.5000     56.5000      0        "Mounting Hole M3"                                                                                 ""                     "Hole M3"     
+Fid4           TopLayer    202.0000     54.0000      0        "Fiducial Sqaure 1mm"                                                                              ""                     Fiducial      
+Fid3           TopLayer    216.0000     96.0000      0        "Fiducial Sqaure 1mm"                                                                              ""                     Fiducial      
+Fid2           TopLayer    61.0000      99.0000      0        "Fiducial Round 1mm"                                                                               ""                     Fiducial      
+Fid1           TopLayer    253.0000     54.0000      0        "Fiducial Round 1mm"                                                                               ""                     Fiducial      
+SW101          TopLayer    138.7000     52.5000      180      "Miniature Slide Switch"                                                                           OS102011MS2QN1         "SPDT On-On"  
+MO104          TopLayer    144.0000     91.5000      180      "RPI CM4 Mounting Studs"                                                                           9774030151R            CM4-M         
+MO103          TopLayer    144.0000     58.5000      180      "RPI CM4 Mounting Studs"                                                                           9774030151R            CM4-M         
+MO107          TopLayer    0.0000       0.0000       0        "Outline of CM4"                                                                                   "RPI CM4"              CM4           
+MO101          TopLayer    166.0000     92.0000      0        "RPI CM4 Pin 1-100"                                                                                DF40HC(3.0)-100DS-0.4V CM4-1         
+MO102          TopLayer    166.0000     58.0000      0        "RPI CM4 Pin 101-200"                                                                              DF40HC(3.0)-100DS-0.4V CM4-2         
+MO105          TopLayer    192.0000     91.5000      180      "RPI CM4 Mounting Studs"                                                                           9774030151R            CM4-M         
+MO106          TopLayer    192.0000     58.5000      180      "RPI CM4 Mounting Studs"                                                                           9774030151R            CM4-M         
+"Logo GTS1"    BottomLayer 0.0000       0.0000       180      "Logo GTS 1"                                                                                       ""                     GTS           
+"Logo FxLand1" TopLayer    0.0000       0.0000       90       "Logo FxLand 2"                                                                                    ""                     FxLand        
+CO102          TopLayer    88.0000      54.1750      0        "USB C connector"                                                                                  USB4500-03-1-A         USB-C         
+CO101          TopLayer    74.0140      61.7580      0        "µSD-Card holder"                                                                                  693071030811           µSD-Card      
+CO103          TopLayer    123.0000     56.6500      0        HDMI                                                                                               10029449               HDMI          
