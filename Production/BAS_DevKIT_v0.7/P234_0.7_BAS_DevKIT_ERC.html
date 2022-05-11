@@ -1,0 +1,417 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22/05/11</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5:11:16 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_DevKIT_0.7\P234_BAS_DevKIT_0.7_ERC\P234_0.7_BAS_DevKIT_ERC.html" class="file"><acronym title="W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_DevKIT_0.7\P234_BAS_DevKIT_0.7_ERC\P234_0.7_BAS_DevKIT_ERC.html">W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_DevKIT_0.7\P234_BAS_DevKIT_0.7_ERC\P234_0.7_BAS_DevKIT_ERC.html</acronym></a></td>
+</tr>
+</table><a name="IDAACMOE2HJPRQKTUWWPBEGFGNKHGMMSCV5NLF3LPYVT2JOCQLDOUM"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">031_RPi-BORG.SchDoc</td>
+<td class="column3">Net CK_N has no driving source (Pin CO502-12, Pin MO502-190)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">031_RPi-BORG.SchDoc</td>
+<td class="column3">Net CK_P has no driving source (Pin CO502-10, Pin MO502-188)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">031_RPi-BORG.SchDoc</td>
+<td class="column3">Net HDMI_SCL has no driving source (Pin CO502-15, Pin MO502-200)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">031_RPi-BORG.SchDoc</td>
+<td class="column3">Net NPI_LED_PWR has no driving source (Pin IC502-2, Pin MO501-95)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire GND has multiple names (Power Object GND (106), Power Object SHD (3), Sheet Entry Power-GND(Passive), Sheet Entry Raspberry Pi Borg-GND(Passive), Sheet Entry Raspberry Pi Control-GND(Passive), Sheet Entry USB-C Control-GND(Passive), Sheet Entry USB-C Control-SHD(Passive), Sheet Entry USB-C expansion ports-GND(Passive), Sheet Entry USB-C expansion ports-SHD(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire I2C_SCL has multiple names (Net Label I2C_SCL (6), Sheet Entry Raspberry Pi Borg-RPi_Comm.I2C_SCL(Passive), Sheet Entry Raspberry Pi Control-RPi_Comm.I2C_SCL(Passive), Sheet Entry USB-C Control-RPi_Comm.I2C_SCL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire I2C_SDA has multiple names (Net Label I2C_SDA (6), Sheet Entry Raspberry Pi Borg-RPi_Comm.I2C_SDA(Passive), Sheet Entry Raspberry Pi Control-RPi_Comm.I2C_SDA(Passive), Sheet Entry USB-C Control-RPi_Comm.I2C_SDA(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire SPI_CE_N has multiple names (Net Label SPI_CE_N (4), Sheet Entry Raspberry Pi Control-USB_Control.SPI_CE_N(Passive), Sheet Entry USB-C Control-USB_Control.SPI_CE_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire SPI_CLK has multiple names (Net Label SPI_CLK (4), Sheet Entry Raspberry Pi Control-USB_Control.SPI_CLK(Passive), Sheet Entry USB-C Control-USB_Control.SPI_CLK(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire SPI_DI has multiple names (Net Label SPI_DI (4), Sheet Entry Raspberry Pi Control-USB_Control.SPI_DI(Passive), Sheet Entry USB-C Control-USB_Control.SPI_DI(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire SPI_DO has multiple names (Net Label SPI_DO (4), Sheet Entry Raspberry Pi Control-USB_Control.SPI_DO(Passive), Sheet Entry USB-C Control-USB_Control.SPI_DO(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USB_RESET has multiple names (Net Label USB_RESET (4), Sheet Entry Raspberry Pi Control-USB_Control.USB_RESET(Passive), Sheet Entry USB-C Control-USB_Control.USB_RESET(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_5V has multiple names (Net Label USBF0_5V (5), Sheet Entry USB-C Control-USBF0.USBF0_5V(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_CC1 has multiple names (Net Label USBF0_CC1 (4), Sheet Entry USB-C Control-USBF0.USBF0_CC(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_CC2 has multiple names (Net Label USBF0_CC2 (2), Sheet Entry USB-C Control-USBF0.USBF0_SBU(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_N has multiple names (Net Label USBF0_N (5), Sheet Entry USB-C Control-USBF0.USBF0_N(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_P has multiple names (Net Label USBF0_P (5), Sheet Entry USB-C Control-USBF0.USBF0_P(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_RX_N has multiple names (Net Label USBF0_RX_N (5), Sheet Entry USB-C Control-USBF0.USBF0_RX_N(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_RX_P has multiple names (Net Label USBF0_RX_P (5), Sheet Entry USB-C Control-USBF0.USBF0_RX_P(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_TX_N has multiple names (Net Label USBF0_TX_N (5), Sheet Entry USB-C Control-USBF0.USBF0_TX_N(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF0_TX_P has multiple names (Net Label USBF0_TX_P (5), Sheet Entry USB-C Control-USBF0.USBF0_TX_P(Passive), Sheet Entry USB-C expansion ports-USBF0.USBF0_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_5V has multiple names (Net Label USBF1_5V (4), Sheet Entry USB-C Control-USBF1.USBF1_5V(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_CC1 has multiple names (Net Label USBF1_CC1 (4), Sheet Entry USB-C Control-USBF1.USBF1_CC(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_CC2 has multiple names (Net Label USBF1_CC2 (3), Sheet Entry USB-C Control-USBF1.USBF1_SBU(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_GPIO1 has multiple names (Net Label USBF1_GPIO1 (4), Sheet Entry Raspberry Pi Control-USB_Control.USBF1_GPIO1(Passive), Sheet Entry USB-C Control-USB_Control.USBF1_GPIO1(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_GPIO2 has multiple names (Net Label USBF1_GPIO2 (4), Sheet Entry Raspberry Pi Control-USB_Control.USBF1_GPIO2(Passive), Sheet Entry USB-C Control-USB_Control.USBF1_GPIO2(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_N has multiple names (Net Label USBF1_N (5), Sheet Entry USB-C Control-USBF1.USBF1_N(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_P has multiple names (Net Label USBF1_P (5), Sheet Entry USB-C Control-USBF1.USBF1_P(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_RX_N has multiple names (Net Label USBF1_RX_N (5), Sheet Entry USB-C Control-USBF1.USBF1_RX_N(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_RX_P has multiple names (Net Label USBF1_RX_P (5), Sheet Entry USB-C Control-USBF1.USBF1_RX_P(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_TX_N has multiple names (Net Label USBF1_TX_N (5), Sheet Entry USB-C Control-USBF1.USBF1_TX_N(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF1_TX_P has multiple names (Net Label USBF1_TX_P (5), Sheet Entry USB-C Control-USBF1.USBF1_TX_P(Passive), Sheet Entry USB-C expansion ports-USBF1.USBF1_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_5V has multiple names (Net Label USBF2_5V (4), Sheet Entry USB-C Control-USBF2.USBF2_5V(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_CC1 has multiple names (Net Label USBF2_CC1 (4), Sheet Entry USB-C Control-USBF2.USBF2_CC(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_CC2 has multiple names (Net Label USBF2_CC2 (3), Sheet Entry USB-C Control-USBF2.USBF2_SBU(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_GPIO1 has multiple names (Net Label USBF2_GPIO1 (4), Sheet Entry Raspberry Pi Control-USB_Control.USBF2_GPIO1(Passive), Sheet Entry USB-C Control-USB_Control.USBF2_GPIO1(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_GPIO2 has multiple names (Net Label USBF2_GPIO2 (4), Sheet Entry Raspberry Pi Control-USB_Control.USBF2_GPIO2(Passive), Sheet Entry USB-C Control-USB_Control.USBF2_GPIO2(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_N has multiple names (Net Label USBF2_N (5), Sheet Entry USB-C Control-USBF2.USBF2_N(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_P has multiple names (Net Label USBF2_P (5), Sheet Entry USB-C Control-USBF2.USBF2_P(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_RX_N has multiple names (Net Label USBF2_RX_N (5), Sheet Entry USB-C Control-USBF2.USBF2_RX_N(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_RX_P has multiple names (Net Label USBF2_RX_P (5), Sheet Entry USB-C Control-USBF2.USBF2_RX_P(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_TX_N has multiple names (Net Label USBF2_TX_N (5), Sheet Entry USB-C Control-USBF2.USBF2_TX_N(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewDevKIT.SchDoc</td>
+<td class="column3">Nets Wire USBF2_TX_P has multiple names (Net Label USBF2_TX_P (5), Sheet Entry USB-C Control-USBF2.USBF2_TX_P(Passive), Sheet Entry USB-C expansion ports-USBF2.USBF2_TX_P(Passive))</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
