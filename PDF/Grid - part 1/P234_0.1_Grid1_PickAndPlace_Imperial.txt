@@ -1,0 +1,30 @@
+Altium Designer Pick and Place Locations
+W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_BaseGridMod1_0.1\P234_BAS_BaseGridMod1_0.1_Pick Place\P234_0.1_Grid1_PickAndPlace_Imperial.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       30/05/22
+Time:       22:51
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator     Layer       Center-X(mil) Center-Y(mil) Rotation Description                             ManfactPart  RefVal  
+CO702          BottomLayer 4724.409      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+CO701          TopLayer    4370.079      1614.173      90       USB4070-30-C                            USB4070-30-C USB4070 
+CO602          BottomLayer 6692.913      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+CO601          TopLayer    4803.150      2204.724      270      USB4070-30-C                            USB4070-30-C USB4070 
+CO502          BottomLayer 5708.661      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+CO501          TopLayer    4370.079      2204.724      90       USB4070-30-C                            USB4070-30-C USB4070 
+CO402          BottomLayer 3543.307      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+CO401          TopLayer    3897.638      1614.173      270      USB4070-30-C                            USB4070-30-C USB4070 
+CO302          BottomLayer 2559.055      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+CO301          TopLayer    3897.638      2204.724      270      USB4070-30-C                            USB4070-30-C USB4070 
+CO202          BottomLayer 1574.803      3027.559      0        "USB C connector Receptacle Horizontal" USB4056-03-A USB4056 
+"Logo FxLand1" TopLayer    0.000         0.000         0        "Logo FxLand 2"                         ""           FxLand  
+CO102          TopLayer    1574.803      1574.803      0        USB4070-30-C                            USB4070-30-C USB4070 
+CO101          TopLayer    3464.567      1614.173      270      USB4070-30-C                            USB4070-30-C USB4070 
+CO802          TopLayer    6692.913      1574.803      0        USB4070-30-C                            USB4070-30-C USB4070 
+CO801          TopLayer    4803.150      1614.173      90       USB4070-30-C                            USB4070-30-C USB4070 
+CO201          TopLayer    3464.567      2204.724      90       USB4070-30-C                            USB4070-30-C USB4070 
