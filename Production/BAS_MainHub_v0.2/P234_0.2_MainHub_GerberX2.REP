@@ -823,12 +823,46 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Fab Notes
+      File : MainHub_Fab_Notes.gbr
+
+    Adding Layer      : Fab Notes
+
+
+Used DCodes :
+    D89
+    D155
+*************************************************************
+
+*************************************************************
+Generating : FlexDC Bottom Coverlay (Flex)
+      File : MainHub_Coverlay_Bot_2.gbr
+
+    Adding Layer      : FlexDC Bottom Coverlay (Flex)
+
+
+Used DCodes :
+    D156
+*************************************************************
+
+*************************************************************
+Generating : FlexDC Top Coverlay (Flex)
+      File : MainHub_Coverlay_Top_2.gbr
+
+    Adding Layer      : FlexDC Top Coverlay (Flex)
+
+
+Used DCodes :
+    D156
+*************************************************************
+
+*************************************************************
 Generating : Profile
       File : MainHub_Profile.gbr
 
 
 Used DCodes :
-    D155
+    D156
 *************************************************************
 
 *************************************************************
@@ -837,9 +871,9 @@ Generating : Non-plated through-hole drill file
 
 
 Used DCodes :
-    D156
     D157
     D158
+    D159
 *************************************************************
 
 *************************************************************
@@ -848,7 +882,6 @@ Generating : Plated through-hole drill file
 
 
 Used DCodes :
-    D159
     D160
     D161
     D162
@@ -860,6 +893,58 @@ Used DCodes :
     D168
     D169
     D170
+    D171
+    D172
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : MainHub_Plated_Drill_1_3.gbr
+
+
+Used DCodes :
+    D167
+    D169
+    D171
+    D172
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : MainHub_Plated_Drill_1_6.gbr
+
+
+Used DCodes :
+    D167
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : MainHub_Plated_Drill_3_6.gbr
+
+
+Used DCodes :
+    D167
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : MainHub_Plated_Drill_3_8.gbr
+
+
+Used DCodes :
+    D167
+    D169
+    D171
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : MainHub_Plated_Drill_6_8.gbr
+
+
+Used DCodes :
+    D167
     D171
 *************************************************************
 
@@ -873,9 +958,82 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D173
     D174
     D175
+    D176
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MainHub_Drawing_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 3
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D174
+    D175
+    D176
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MainHub_Drawing_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 6
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D175
+    D176
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MainHub_Drawing_4.gbr
+
+    Adding Drill Pair : Layer 3-Layer 6
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D175
+    D176
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MainHub_Drawing_5.gbr
+
+    Adding Drill Pair : Layer 3-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D174
+    D175
+    D176
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : MainHub_Drawing_6.gbr
+
+    Adding Drill Pair : Layer 6-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D174
+    D175
+    D176
 *************************************************************
 
 *************************************************************
@@ -888,6 +1046,71 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D173
+    D174
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MainHub_Drillmap_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 3
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D174
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MainHub_Drillmap_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 6
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D174
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MainHub_Drillmap_4.gbr
+
+    Adding Drill Pair : Layer 3-Layer 6
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D174
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MainHub_Drillmap_5.gbr
+
+    Adding Drill Pair : Layer 3-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D174
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : MainHub_Drillmap_6.gbr
+
+    Adding Drill Pair : Layer 6-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D174
 *************************************************************
 
