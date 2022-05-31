@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_BaseGridMod2_0.1\P234_BAS_BaseGridMod2_0.1_Pick Place\P234_0.1_Grid2_PickAndPlace_Metric.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       30/05/22
+Time:       22:54
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator     Layer       Center-X(mm) Center-Y(mm) Rotation Description                       ManfactPart  RefVal  
+"Logo FxLand1" TopLayer    0.0000       0.0000       0        "Logo FxLand 2"                   ""           FxLand  
+CO704          BottomLayer 120.0000     87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO703          TopLayer    105.0000     105.0000     0        USB4070-30-C                      USB4070-30-C USB4070 
+CO604          BottomLayer 170.0000     87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO603          TopLayer    170.0000     105.0000     0        USB4070-30-C                      USB4070-30-C USB4070 
+CO504          BottomLayer 145.0000     87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO503          TopLayer    170.0000     170.0000     0        USB4070-30-C                      USB4070-30-C USB4070 
+CO404          BottomLayer 90.0000      87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO403          TopLayer    105.0000     170.0000     0        USB4070-30-C                      USB4070-30-C USB4070 
+CO304          BottomLayer 65.0000      87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO303          TopLayer    40.0000      170.0000     0        USB4070-30-C                      USB4070-30-C USB4070 
+CO204          BottomLayer 40.0000      87.7500      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO203          TopLayer    40.0000      105.0000     0        USB4070-30-C                      USB4070-30-C USB4070 

@@ -1,0 +1,26 @@
+Altium Designer Pick and Place Locations
+W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_BaseGridMod2_0.1\P234_BAS_BaseGridMod2_0.1_Pick Place\P234_0.1_Grid2_PickAndPlace_Imperial.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       30/05/22
+Time:       22:54
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator     Layer       Center-X(mil) Center-Y(mil) Rotation Description                       ManfactPart  RefVal  
+"Logo FxLand1" TopLayer    0.000         0.000         0        "Logo FxLand 2"                   ""           FxLand  
+CO704          BottomLayer 4724.409      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO703          TopLayer    4133.858      4133.858      0        USB4070-30-C                      USB4070-30-C USB4070 
+CO604          BottomLayer 6692.913      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO603          TopLayer    6692.913      4133.858      0        USB4070-30-C                      USB4070-30-C USB4070 
+CO504          BottomLayer 5708.661      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO503          TopLayer    6692.913      6692.913      0        USB4070-30-C                      USB4070-30-C USB4070 
+CO404          BottomLayer 3543.307      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO403          TopLayer    4133.858      6692.913      0        USB4070-30-C                      USB4070-30-C USB4070 
+CO304          BottomLayer 2559.055      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO303          TopLayer    1574.803      6692.913      0        USB4070-30-C                      USB4070-30-C USB4070 
+CO204          BottomLayer 1574.803      3454.724      180      "USB C connector Plug Horizontal" USB4155-03-C USB4155 
+CO203          TopLayer    1574.803      4133.858      0        USB4070-30-C                      USB4070-30-C USB4070 
