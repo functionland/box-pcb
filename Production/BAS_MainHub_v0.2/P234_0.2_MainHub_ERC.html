@@ -1,0 +1,1457 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22/05/30</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:24:21 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_MainHub_0.2\P234_BAS_MainHub_0.2_ERC\P234_0.2_MainHub_ERC.html" class="file"><acronym title="W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_MainHub_0.2\P234_BAS_MainHub_0.2_ERC\P234_0.2_MainHub_ERC.html">W:\GreenfieldTechSolutions\Projects\Ontwerpen\Project_234_BAS\RenderedFiles\BAS_MainHub_0.2\P234_BAS_MainHub_0.2_ERC\P234_0.2_MainHub_ERC.html</acronym></a></td>
+</tr>
+</table><a name="IDC0ZUGKQGC1QYCC1H3LEDA3EPVID013MFS04E0TCQOAI0MXBJMO5F"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Duplicate Net Names Wire +3V3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Duplicate Net Names Wire +24V</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Duplicate Net Names Wire +24V</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Duplicate Net Names Wire +24V</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Duplicate Net Names Wire +24V</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF0_CC1 has only one pin (Pin CO351-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF0_CC2 has only one pin (Pin CO351-25)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF1_CC1 has only one pin (Pin CO352-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF1_CC2 has only one pin (Pin CO352-25)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF2_CC1 has only one pin (Pin CO353-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF2_CC2 has only one pin (Pin CO353-25)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF3_CC1 has only one pin (Pin CO354-5)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Net USBF3_CC2 has only one pin (Pin CO354-25)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">501_RPi.SchDoc</td>
+<td class="column3">Port +3V3 not matched to Sheet Entry at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Port +24V not matched to Sheet Entry at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Port +24V not matched to Sheet Entry at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Error</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Port +24V not matched to Sheet Entry at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Error</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Port +24V not matched to Sheet Entry at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +1V8 at 3400mil,14100mil has been reduced to local level by presence of port at 1000mil,13000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +1V8 at 3400mil,14100mil has been reduced to local level by presence of port at 1000mil,13000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +1V8 at 3400mil,14100mil has been reduced to local level by presence of port at 1000mil,13000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +1V8 at 3400mil,14100mil has been reduced to local level by presence of port at 1000mil,13000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +1V8 at 18600mil,14100mil has been reduced to local level by presence of port at 20200mil,13000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +1V25 at 3700mil,14100mil has been reduced to local level by presence of port at 1000mil,12800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +1V25 at 3700mil,14100mil has been reduced to local level by presence of port at 1000mil,12800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +1V25 at 3700mil,14100mil has been reduced to local level by presence of port at 1000mil,12800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +1V25 at 3700mil,14100mil has been reduced to local level by presence of port at 1000mil,12800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +1V25 at 18300mil,14100mil has been reduced to local level by presence of port at 20200mil,12800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">501_RPi.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 3100mil,14100mil has been reduced to local level by presence of port at 1000mil,13200mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 3100mil,14100mil has been reduced to local level by presence of port at 1000mil,13200mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 3100mil,14100mil has been reduced to local level by presence of port at 1000mil,13200mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 3100mil,14100mil has been reduced to local level by presence of port at 1000mil,13200mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +3V3 at 18900mil,14100mil has been reduced to local level by presence of port at 20200mil,13200mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">051_PowerUSB.SchDoc</td>
+<td class="column3">Global Power-Object +3V3_X at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +3V3_X at 17700mil,14100mil has been reduced to local level by presence of port at 20200mil,12400mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">501_RPi.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 1600mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 2500mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 2800mil,14100mil has been reduced to local level by presence of port at 1000mil,13400mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 2800mil,14100mil has been reduced to local level by presence of port at 1000mil,13400mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 2800mil,14100mil has been reduced to local level by presence of port at 1000mil,13400mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 2800mil,14100mil has been reduced to local level by presence of port at 1000mil,13400mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +5V at 19200mil,14100mil has been reduced to local level by presence of port at 20200mil,13400mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">051_PowerUSB.SchDoc</td>
+<td class="column3">Global Power-Object +5V_X at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +5V_X at 18000mil,14100mil has been reduced to local level by presence of port at 20200mil,12600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 2500mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 2500mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 2500mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 2500mil,14100mil has been reduced to local level by presence of port at 1000mil,13600mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +12V at 19500mil,14100mil has been reduced to local level by presence of port at 20200mil,13600mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +24V at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object +24V at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object +24V at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object +24V at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object +24V at 20100mil,14100mil has been reduced to local level by presence of port at 20200mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">051_PowerUSB.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">501_RPi.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object GND at 17200mil,700mil has been reduced to local level by presence of port at 16600mil,800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">051_PowerUSB.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 1600mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">351_FrameUSB.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 1900mil,14100mil has been reduced to local level by presence of port at 1000mil,14000mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 2200mil,14100mil has been reduced to local level by presence of port at 1000mil,13800mil</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">003_Power.SchDoc</td>
+<td class="column3">Global Power-Object VPWR at 19800mil,14100mil has been reduced to local level by presence of port at 20200mil,13800mil</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , CU0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">501_RPi.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , CU1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HF0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HF1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">401_USBControl.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HF2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HF3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HG1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">231_GridUSB-2.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HG2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">301_FrameWorkUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HPF1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">201_GridUSB-1.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU6</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">101_GridPosMainHub.SchDoc</td>
+<td class="column3">Multiple Harness Types on harness , HU7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire GND has multiple names (Power Object GND (253), Power Object SHD (5), Sheet Entry Connection To Grid-GND(Passive), Sheet Entry Framework Flex USB3-GND(Passive), Sheet Entry Framework Flex USB3-USBPF.USBPF_GND(Passive), Sheet Entry Framework USB expansion ports-GND(Passive), Sheet Entry Framework USB expansion ports-USBF2.USBF2_GND(Passive), Sheet Entry Grid USB3 part 1-GND(Passive), Sheet Entry Grid USB3 part 1-USBG1.USBG1_GND(Passive), Sheet Entry Grid USB3 part 2-GND(Passive), Sheet Entry Grid USB3 part 2-USBG2.USBG2_GND(Passive), Sheet Entry Power-GND(Passive), Sheet Entry PowerUSB-GND(Passive), Sheet Entry Raspberry Pi Control-GND(Passive), Sheet Entry USB control-GND(Passive), Sheet Entry USB control-USBF2.USBF2_GND(Passive), Sheet Entry USB control-USBG1.USBG1_GND(Passive), Sheet Entry USB control-USBG2.USBG2_GND(Passive), Sheet Entry USB control-USBPF.USBPF_GND(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U0 has multiple names (Net Label I2C_IRQ_U0 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U0(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U0(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U1 has multiple names (Net Label I2C_IRQ_U1 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U1(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U1(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U2 has multiple names (Net Label I2C_IRQ_U2 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U2(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U2(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U3 has multiple names (Net Label I2C_IRQ_U3 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U3(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U3(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U4 has multiple names (Net Label I2C_IRQ_U4 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U4(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U4(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U5 has multiple names (Net Label I2C_IRQ_U5 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U5(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U5(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U6 has multiple names (Net Label I2C_IRQ_U6 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U6(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U6(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_IRQ_U7 has multiple names (Net Label I2C_IRQ_U7 (4), Sheet Entry PowerUSB-I2C.I2C_IRQ_U7(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_IRQ_U7(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_SCL has multiple names (Net Label I2C_SCL (11), Sheet Entry PowerUSB-I2C.I2C_SCL(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_SCL(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire I2C_SDA has multiple names (Net Label I2C_SDA (11), Sheet Entry PowerUSB-I2C.I2C_SDA(Passive), Sheet Entry Raspberry Pi Control-I2C.I2C_SDA(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_CE1 has multiple names (Net Label SPI_CE1 (7), Sheet Entry Framework Flex USB3-SPI.SPI_CE1(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_CE1(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_CE1(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_CE1(Passive), Sheet Entry USB control-SPI.SPI_CE1(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_CE2 has multiple names (Net Label SPI_CE2 (7), Sheet Entry Framework Flex USB3-SPI.SPI_CE2(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_CE2(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_CE2(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_CE2(Passive), Sheet Entry USB control-SPI.SPI_CE2(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_CE3 has multiple names (Net Label SPI_CE3 (7), Sheet Entry Framework Flex USB3-SPI.SPI_CE3(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_CE3(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_CE3(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_CE3(Passive), Sheet Entry USB control-SPI.SPI_CE3(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_CE4 has multiple names (Net Label SPI_CE4 (7), Sheet Entry Framework Flex USB3-SPI.SPI_CE4(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_CE4(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_CE4(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_CE4(Passive), Sheet Entry USB control-SPI.SPI_CE4(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_CLK has multiple names (Net Label SPI_CLK (10), Sheet Entry Framework Flex USB3-SPI.SPI_CLK(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_CLK(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_CLK(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_CLK(Passive), Sheet Entry USB control-SPI.SPI_CLK(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_DI has multiple names (Net Label SPI_DI (10), Sheet Entry Framework Flex USB3-SPI.SPI_DI(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_DI(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_DI(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_DI(Passive), Sheet Entry USB control-SPI.SPI_DI(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire SPI_DO has multiple names (Net Label SPI_DO (10), Sheet Entry Framework Flex USB3-SPI.SPI_DO(Passive), Sheet Entry Grid USB3 part 1-SPI.SPI_DO(Passive), Sheet Entry Grid USB3 part 2-SPI.SPI_DO(Passive), Sheet Entry Raspberry Pi Control-SPI.SPI_DO(Passive), Sheet Entry USB control-SPI.SPI_DO(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U0_SEL has multiple names (Net Label U0_SEL (5), Sheet Entry Connection To Grid-USB0.USB0_SEL(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_SEL(Passive), Sheet Entry PowerUSB-USB0.USB0_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U1_SEL has multiple names (Net Label U1_SEL (5), Sheet Entry Connection To Grid-USB1.USB1_SEL(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_SEL(Passive), Sheet Entry PowerUSB-USB1.USB1_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U2_SEL has multiple names (Net Label U2_SEL (5), Sheet Entry Connection To Grid-USB2.USB2_SEL(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_SEL(Passive), Sheet Entry PowerUSB-USB2.USB2_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U3_SEL has multiple names (Net Label U3_SEL (5), Sheet Entry Connection To Grid-USB3.USB3_SEL(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_SEL(Passive), Sheet Entry PowerUSB-USB3.USB3_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U4_SEL has multiple names (Net Label U4_SEL (5), Sheet Entry Connection To Grid-USB4.USB4_SEL(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_SEL(Passive), Sheet Entry PowerUSB-USB4.USB4_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U5_SEL has multiple names (Net Label U5_SEL (5), Sheet Entry Connection To Grid-USB5.USB5_SEL(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_SEL(Passive), Sheet Entry PowerUSB-USB5.USB5_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U6_SEL has multiple names (Net Label U6_SEL (5), Sheet Entry Connection To Grid-USB6.USB6_SEL(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_SEL(Passive), Sheet Entry PowerUSB-USB6.USB6_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire U7_SEL has multiple names (Net Label U7_SEL (5), Sheet Entry Connection To Grid-USB7.USB7_SEL(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_SEL(Passive), Sheet Entry PowerUSB-USB7.USB7_SEL(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_5V has multiple names (Net Label USB0_5V (8), Sheet Entry Connection To Grid-USB0.USB0_5V(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_5V(Passive), Sheet Entry PowerUSB-USB0.USB0_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_CC1 has multiple names (Net Label USB0_CC1 (5), Sheet Entry Connection To Grid-USB0.USB0_CC(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_CC(Passive), Sheet Entry PowerUSB-USB0.USB0_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_CC2 has multiple names (Net Label USB0_CC2 (5), Sheet Entry Connection To Grid-USB0.USB0_SBU(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_SBU(Passive), Sheet Entry PowerUSB-USB0.USB0_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_N has multiple names (Net Label USB0_N (7), Sheet Entry Connection To Grid-USB0.USB0_N(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_N(Passive), Sheet Entry PowerUSB-USB0.USB0_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_P has multiple names (Net Label USB0_P (7), Sheet Entry Connection To Grid-USB0.USB0_P(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_P(Passive), Sheet Entry PowerUSB-USB0.USB0_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_RX_N has multiple names (Net Label USB0_RX_N (6), Sheet Entry Connection To Grid-USB0.USB0_RX_N(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_RX_N(Passive), Sheet Entry PowerUSB-USB0.USB0_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_RX_P has multiple names (Net Label USB0_RX_P (6), Sheet Entry Connection To Grid-USB0.USB0_RX_P(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_RX_P(Passive), Sheet Entry PowerUSB-USB0.USB0_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_TX_N has multiple names (Net Label USB0_TX_N (6), Sheet Entry Connection To Grid-USB0.USB0_TX_N(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_TX_N(Passive), Sheet Entry PowerUSB-USB0.USB0_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB0_TX_P has multiple names (Net Label USB0_TX_P (6), Sheet Entry Connection To Grid-USB0.USB0_TX_P(Passive), Sheet Entry Grid USB3 part 1-USB0.USB0_TX_P(Passive), Sheet Entry PowerUSB-USB0.USB0_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_5V has multiple names (Net Label USB1_5V (8), Sheet Entry Connection To Grid-USB1.USB1_5V(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_5V(Passive), Sheet Entry PowerUSB-USB1.USB1_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_CC1 has multiple names (Net Label USB1_CC1 (5), Sheet Entry Connection To Grid-USB1.USB1_CC(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_CC(Passive), Sheet Entry PowerUSB-USB1.USB1_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_CC2 has multiple names (Net Label USB1_CC2 (5), Sheet Entry Connection To Grid-USB1.USB1_SBU(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_SBU(Passive), Sheet Entry PowerUSB-USB1.USB1_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_N has multiple names (Net Label USB1_N (7), Sheet Entry Connection To Grid-USB1.USB1_N(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_N(Passive), Sheet Entry PowerUSB-USB1.USB1_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_P has multiple names (Net Label USB1_P (7), Sheet Entry Connection To Grid-USB1.USB1_P(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_P(Passive), Sheet Entry PowerUSB-USB1.USB1_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_RX_N has multiple names (Net Label USB1_RX_N (6), Sheet Entry Connection To Grid-USB1.USB1_RX_N(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_RX_N(Passive), Sheet Entry PowerUSB-USB1.USB1_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_RX_P has multiple names (Net Label USB1_RX_P (6), Sheet Entry Connection To Grid-USB1.USB1_RX_P(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_RX_P(Passive), Sheet Entry PowerUSB-USB1.USB1_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_TX_N has multiple names (Net Label USB1_TX_N (6), Sheet Entry Connection To Grid-USB1.USB1_TX_N(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_TX_N(Passive), Sheet Entry PowerUSB-USB1.USB1_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB1_TX_P has multiple names (Net Label USB1_TX_P (6), Sheet Entry Connection To Grid-USB1.USB1_TX_P(Passive), Sheet Entry Grid USB3 part 1-USB1.USB1_TX_P(Passive), Sheet Entry PowerUSB-USB1.USB1_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_5V has multiple names (Net Label USB2_5V (8), Sheet Entry Connection To Grid-USB2.USB2_5V(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_5V(Passive), Sheet Entry PowerUSB-USB2.USB2_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_CC1 has multiple names (Net Label USB2_CC1 (5), Sheet Entry Connection To Grid-USB2.USB2_CC(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_CC(Passive), Sheet Entry PowerUSB-USB2.USB2_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_CC2 has multiple names (Net Label USB2_CC2 (5), Sheet Entry Connection To Grid-USB2.USB2_SBU(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_SBU(Passive), Sheet Entry PowerUSB-USB2.USB2_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_N has multiple names (Net Label USB2_N (7), Sheet Entry Connection To Grid-USB2.USB2_N(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_N(Passive), Sheet Entry PowerUSB-USB2.USB2_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_P has multiple names (Net Label USB2_P (7), Sheet Entry Connection To Grid-USB2.USB2_P(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_P(Passive), Sheet Entry PowerUSB-USB2.USB2_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_RX_N has multiple names (Net Label USB2_RX_N (6), Sheet Entry Connection To Grid-USB2.USB2_RX_N(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_RX_N(Passive), Sheet Entry PowerUSB-USB2.USB2_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_RX_P has multiple names (Net Label USB2_RX_P (6), Sheet Entry Connection To Grid-USB2.USB2_RX_P(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_RX_P(Passive), Sheet Entry PowerUSB-USB2.USB2_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_TX_N has multiple names (Net Label USB2_TX_N (6), Sheet Entry Connection To Grid-USB2.USB2_TX_N(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_TX_N(Passive), Sheet Entry PowerUSB-USB2.USB2_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB2_TX_P has multiple names (Net Label USB2_TX_P (6), Sheet Entry Connection To Grid-USB2.USB2_TX_P(Passive), Sheet Entry Grid USB3 part 2-USB2.USB2_TX_P(Passive), Sheet Entry PowerUSB-USB2.USB2_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_5V has multiple names (Net Label USB3_5V (8), Sheet Entry Connection To Grid-USB3.USB3_5V(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_5V(Passive), Sheet Entry PowerUSB-USB3.USB3_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_CC1 has multiple names (Net Label USB3_CC1 (5), Sheet Entry Connection To Grid-USB3.USB3_CC(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_CC(Passive), Sheet Entry PowerUSB-USB3.USB3_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_CC2 has multiple names (Net Label USB3_CC2 (5), Sheet Entry Connection To Grid-USB3.USB3_SBU(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_SBU(Passive), Sheet Entry PowerUSB-USB3.USB3_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_N has multiple names (Net Label USB3_N (7), Sheet Entry Connection To Grid-USB3.USB3_N(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_N(Passive), Sheet Entry PowerUSB-USB3.USB3_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_P has multiple names (Net Label USB3_P (7), Sheet Entry Connection To Grid-USB3.USB3_P(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_P(Passive), Sheet Entry PowerUSB-USB3.USB3_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_RX_N has multiple names (Net Label USB3_RX_N (6), Sheet Entry Connection To Grid-USB3.USB3_RX_N(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_RX_N(Passive), Sheet Entry PowerUSB-USB3.USB3_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_RX_P has multiple names (Net Label USB3_RX_P (6), Sheet Entry Connection To Grid-USB3.USB3_RX_P(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_RX_P(Passive), Sheet Entry PowerUSB-USB3.USB3_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_TX_N has multiple names (Net Label USB3_TX_N (6), Sheet Entry Connection To Grid-USB3.USB3_TX_N(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_TX_N(Passive), Sheet Entry PowerUSB-USB3.USB3_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB3_TX_P has multiple names (Net Label USB3_TX_P (6), Sheet Entry Connection To Grid-USB3.USB3_TX_P(Passive), Sheet Entry Grid USB3 part 2-USB3.USB3_TX_P(Passive), Sheet Entry PowerUSB-USB3.USB3_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_5V has multiple names (Net Label USB4_5V (8), Sheet Entry Connection To Grid-USB4.USB4_5V(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_5V(Passive), Sheet Entry PowerUSB-USB4.USB4_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_CC1 has multiple names (Net Label USB4_CC1 (5), Sheet Entry Connection To Grid-USB4.USB4_CC(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_CC(Passive), Sheet Entry PowerUSB-USB4.USB4_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_CC2 has multiple names (Net Label USB4_CC2 (5), Sheet Entry Connection To Grid-USB4.USB4_SBU(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_SBU(Passive), Sheet Entry PowerUSB-USB4.USB4_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_N has multiple names (Net Label USB4_N (7), Sheet Entry Connection To Grid-USB4.USB4_N(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_N(Passive), Sheet Entry PowerUSB-USB4.USB4_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_P has multiple names (Net Label USB4_P (7), Sheet Entry Connection To Grid-USB4.USB4_P(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_P(Passive), Sheet Entry PowerUSB-USB4.USB4_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_RX_N has multiple names (Net Label USB4_RX_N (6), Sheet Entry Connection To Grid-USB4.USB4_RX_N(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_RX_N(Passive), Sheet Entry PowerUSB-USB4.USB4_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_RX_P has multiple names (Net Label USB4_RX_P (6), Sheet Entry Connection To Grid-USB4.USB4_RX_P(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_RX_P(Passive), Sheet Entry PowerUSB-USB4.USB4_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_TX_N has multiple names (Net Label USB4_TX_N (6), Sheet Entry Connection To Grid-USB4.USB4_TX_N(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_TX_N(Passive), Sheet Entry PowerUSB-USB4.USB4_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB4_TX_P has multiple names (Net Label USB4_TX_P (6), Sheet Entry Connection To Grid-USB4.USB4_TX_P(Passive), Sheet Entry Grid USB3 part 1-USB4.USB4_TX_P(Passive), Sheet Entry PowerUSB-USB4.USB4_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_5V has multiple names (Net Label USB5_5V (8), Sheet Entry Connection To Grid-USB5.USB5_5V(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_5V(Passive), Sheet Entry PowerUSB-USB5.USB5_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_CC1 has multiple names (Net Label USB5_CC1 (5), Sheet Entry Connection To Grid-USB5.USB5_CC(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_CC(Passive), Sheet Entry PowerUSB-USB5.USB5_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_CC2 has multiple names (Net Label USB5_CC2 (5), Sheet Entry Connection To Grid-USB5.USB5_SBU(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_SBU(Passive), Sheet Entry PowerUSB-USB5.USB5_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_N has multiple names (Net Label USB5_N (7), Sheet Entry Connection To Grid-USB5.USB5_N(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_N(Passive), Sheet Entry PowerUSB-USB5.USB5_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_P has multiple names (Net Label USB5_P (7), Sheet Entry Connection To Grid-USB5.USB5_P(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_P(Passive), Sheet Entry PowerUSB-USB5.USB5_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_RX_N has multiple names (Net Label USB5_RX_N (6), Sheet Entry Connection To Grid-USB5.USB5_RX_N(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_RX_N(Passive), Sheet Entry PowerUSB-USB5.USB5_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_RX_P has multiple names (Net Label USB5_RX_P (6), Sheet Entry Connection To Grid-USB5.USB5_RX_P(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_RX_P(Passive), Sheet Entry PowerUSB-USB5.USB5_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_TX_N has multiple names (Net Label USB5_TX_N (6), Sheet Entry Connection To Grid-USB5.USB5_TX_N(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_TX_N(Passive), Sheet Entry PowerUSB-USB5.USB5_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB5_TX_P has multiple names (Net Label USB5_TX_P (6), Sheet Entry Connection To Grid-USB5.USB5_TX_P(Passive), Sheet Entry Grid USB3 part 1-USB5.USB5_TX_P(Passive), Sheet Entry PowerUSB-USB5.USB5_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_5V has multiple names (Net Label USB6_5V (8), Sheet Entry Connection To Grid-USB6.USB6_5V(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_5V(Passive), Sheet Entry PowerUSB-USB6.USB6_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_CC1 has multiple names (Net Label USB6_CC1 (5), Sheet Entry Connection To Grid-USB6.USB6_CC(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_CC(Passive), Sheet Entry PowerUSB-USB6.USB6_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_CC2 has multiple names (Net Label USB6_CC2 (5), Sheet Entry Connection To Grid-USB6.USB6_SBU(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_SBU(Passive), Sheet Entry PowerUSB-USB6.USB6_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_N has multiple names (Net Label USB6_N (7), Sheet Entry Connection To Grid-USB6.USB6_N(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_N(Passive), Sheet Entry PowerUSB-USB6.USB6_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_P has multiple names (Net Label USB6_P (7), Sheet Entry Connection To Grid-USB6.USB6_P(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_P(Passive), Sheet Entry PowerUSB-USB6.USB6_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_RX_N has multiple names (Net Label USB6_RX_N (6), Sheet Entry Connection To Grid-USB6.USB6_RX_N(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_RX_N(Passive), Sheet Entry PowerUSB-USB6.USB6_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_RX_P has multiple names (Net Label USB6_RX_P (6), Sheet Entry Connection To Grid-USB6.USB6_RX_P(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_RX_P(Passive), Sheet Entry PowerUSB-USB6.USB6_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_TX_N has multiple names (Net Label USB6_TX_N (6), Sheet Entry Connection To Grid-USB6.USB6_TX_N(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_TX_N(Passive), Sheet Entry PowerUSB-USB6.USB6_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB6_TX_P has multiple names (Net Label USB6_TX_P (6), Sheet Entry Connection To Grid-USB6.USB6_TX_P(Passive), Sheet Entry Grid USB3 part 2-USB6.USB6_TX_P(Passive), Sheet Entry PowerUSB-USB6.USB6_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_5V has multiple names (Net Label USB7_5V (8), Sheet Entry Connection To Grid-USB7.USB7_5V(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_5V(Passive), Sheet Entry PowerUSB-USB7.USB7_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_CC1 has multiple names (Net Label USB7_CC1 (5), Sheet Entry Connection To Grid-USB7.USB7_CC(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_CC(Passive), Sheet Entry PowerUSB-USB7.USB7_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_CC2 has multiple names (Net Label USB7_CC2 (5), Sheet Entry Connection To Grid-USB7.USB7_SBU(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_SBU(Passive), Sheet Entry PowerUSB-USB7.USB7_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_N has multiple names (Net Label USB7_N (7), Sheet Entry Connection To Grid-USB7.USB7_N(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_N(Passive), Sheet Entry PowerUSB-USB7.USB7_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_P has multiple names (Net Label USB7_P (7), Sheet Entry Connection To Grid-USB7.USB7_P(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_P(Passive), Sheet Entry PowerUSB-USB7.USB7_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_RX_N has multiple names (Net Label USB7_RX_N (6), Sheet Entry Connection To Grid-USB7.USB7_RX_N(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_RX_N(Passive), Sheet Entry PowerUSB-USB7.USB7_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_RX_P has multiple names (Net Label USB7_RX_P (6), Sheet Entry Connection To Grid-USB7.USB7_RX_P(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_RX_P(Passive), Sheet Entry PowerUSB-USB7.USB7_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_TX_N has multiple names (Net Label USB7_TX_N (6), Sheet Entry Connection To Grid-USB7.USB7_TX_N(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_TX_N(Passive), Sheet Entry PowerUSB-USB7.USB7_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USB7_TX_P has multiple names (Net Label USB7_TX_P (6), Sheet Entry Connection To Grid-USB7.USB7_TX_P(Passive), Sheet Entry Grid USB3 part 2-USB7.USB7_TX_P(Passive), Sheet Entry PowerUSB-USB7.USB7_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_5V has multiple names (Net Label USBF0_5V (4), Sheet Entry Framework Flex USB3-USBF0.USBF0_5V(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_CC1 has multiple names (Net Label USBF0_CC1 (3), Sheet Entry Framework Flex USB3-USBF0.USBF0_CC(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_CC2 has multiple names (Net Label USBF0_CC2 (3), Sheet Entry Framework Flex USB3-USBF0.USBF0_SBU(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_N has multiple names (Net Label USBF0_N (6), Sheet Entry Framework Flex USB3-USBF0.USBF0_N(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_P has multiple names (Net Label USBF0_P (6), Sheet Entry Framework Flex USB3-USBF0.USBF0_P(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_RX_N has multiple names (Net Label USBF0_RX_N (5), Sheet Entry Framework Flex USB3-USBF0.USBF0_RX_N(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_RX_P has multiple names (Net Label USBF0_RX_P (5), Sheet Entry Framework Flex USB3-USBF0.USBF0_RX_P(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_TX_N has multiple names (Net Label USBF0_TX_N (5), Sheet Entry Framework Flex USB3-USBF0.USBF0_TX_N(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF0_TX_P has multiple names (Net Label USBF0_TX_P (5), Sheet Entry Framework Flex USB3-USBF0.USBF0_TX_P(Passive), Sheet Entry Framework USB expansion ports-USBF0.USBF0_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_5V has multiple names (Net Label USBF1_5V (4), Sheet Entry Framework Flex USB3-USBF1.USBF1_5V(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_CC1 has multiple names (Net Label USBF1_CC1 (3), Sheet Entry Framework Flex USB3-USBF1.USBF1_CC(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_CC2 has multiple names (Net Label USBF1_CC2 (3), Sheet Entry Framework Flex USB3-USBF1.USBF1_SBU(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_N has multiple names (Net Label USBF1_N (6), Sheet Entry Framework Flex USB3-USBF1.USBF1_N(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_P has multiple names (Net Label USBF1_P (6), Sheet Entry Framework Flex USB3-USBF1.USBF1_P(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_RX_N has multiple names (Net Label USBF1_RX_N (5), Sheet Entry Framework Flex USB3-USBF1.USBF1_RX_N(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_RX_P has multiple names (Net Label USBF1_RX_P (5), Sheet Entry Framework Flex USB3-USBF1.USBF1_RX_P(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_TX_N has multiple names (Net Label USBF1_TX_N (5), Sheet Entry Framework Flex USB3-USBF1.USBF1_TX_N(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF1_TX_P has multiple names (Net Label USBF1_TX_P (5), Sheet Entry Framework Flex USB3-USBF1.USBF1_TX_P(Passive), Sheet Entry Framework USB expansion ports-USBF1.USBF1_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_5V has multiple names (Net Label USBF2_5V (4), Sheet Entry Framework USB expansion ports-USBF2.USBF2_5V(Passive), Sheet Entry USB control-USBF2.USBF2_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_CC1 has multiple names (Net Label USBF2_CC1 (3), Sheet Entry Framework USB expansion ports-USBF2.USBF2_CC(Passive), Sheet Entry USB control-USBF2.USBF2_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_CC2 has multiple names (Net Label USBF2_CC2 (3), Sheet Entry Framework USB expansion ports-USBF2.USBF2_SBU(Passive), Sheet Entry USB control-USBF2.USBF2_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_N has multiple names (Net Label USBF2_N (6), Sheet Entry Framework USB expansion ports-USBF2.USBF2_N(Passive), Sheet Entry USB control-USBF2.USBF2_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_P has multiple names (Net Label USBF2_P (6), Sheet Entry Framework USB expansion ports-USBF2.USBF2_P(Passive), Sheet Entry USB control-USBF2.USBF2_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_RX_N has multiple names (Net Label USBF2_RX_N (5), Sheet Entry Framework USB expansion ports-USBF2.USBF2_RX_N(Passive), Sheet Entry USB control-USBF2.USBF2_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_RX_P has multiple names (Net Label USBF2_RX_P (5), Sheet Entry Framework USB expansion ports-USBF2.USBF2_RX_P(Passive), Sheet Entry USB control-USBF2.USBF2_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_TX_N has multiple names (Net Label USBF2_TX_N (5), Sheet Entry Framework USB expansion ports-USBF2.USBF2_TX_N(Passive), Sheet Entry USB control-USBF2.USBF2_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF2_TX_P has multiple names (Net Label USBF2_TX_P (5), Sheet Entry Framework USB expansion ports-USBF2.USBF2_TX_P(Passive), Sheet Entry USB control-USBF2.USBF2_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_5V has multiple names (Net Label USBF3_5V (4), Sheet Entry Framework Flex USB3-USBF3.USBF3_5V(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_CC1 has multiple names (Net Label USBF3_CC1 (3), Sheet Entry Framework Flex USB3-USBF3.USBF3_CC(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_CC2 has multiple names (Net Label USBF3_CC2 (3), Sheet Entry Framework Flex USB3-USBF3.USBF3_SBU(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_N has multiple names (Net Label USBF3_N (6), Sheet Entry Framework Flex USB3-USBF3.USBF3_N(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_P has multiple names (Net Label USBF3_P (6), Sheet Entry Framework Flex USB3-USBF3.USBF3_P(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_RX_N has multiple names (Net Label USBF3_RX_N (5), Sheet Entry Framework Flex USB3-USBF3.USBF3_RX_N(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_RX_P has multiple names (Net Label USBF3_RX_P (5), Sheet Entry Framework Flex USB3-USBF3.USBF3_RX_P(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_TX_N has multiple names (Net Label USBF3_TX_N (5), Sheet Entry Framework Flex USB3-USBF3.USBF3_TX_N(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBF3_TX_P has multiple names (Net Label USBF3_TX_P (5), Sheet Entry Framework Flex USB3-USBF3.USBF3_TX_P(Passive), Sheet Entry Framework USB expansion ports-USBF3.USBF3_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_5V has multiple names (Net Label USBG1_5V (2), Sheet Entry Grid USB3 part 1-USBG1.USBG1_5V(Passive), Sheet Entry USB control-USBG1.USBG1_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_CC1 has multiple names (Net Label USBG1_CC1 (2), Sheet Entry Grid USB3 part 1-USBG1.USBG1_CC(Passive), Sheet Entry USB control-USBG1.USBG1_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_CC2 has multiple names (Net Label USBG1_CC2 (2), Sheet Entry Grid USB3 part 1-USBG1.USBG1_SBU(Passive), Sheet Entry USB control-USBG1.USBG1_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_N has multiple names (Net Label USBG1_N (4), Sheet Entry Grid USB3 part 1-USBG1.USBG1_N(Passive), Sheet Entry USB control-USBG1.USBG1_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_P has multiple names (Net Label USBG1_P (4), Sheet Entry Grid USB3 part 1-USBG1.USBG1_P(Passive), Sheet Entry USB control-USBG1.USBG1_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_RX_N has multiple names (Net Label USBG1_RX_N (4), Sheet Entry Grid USB3 part 1-USBG1.USBF0_RX_N(Passive), Sheet Entry USB control-USBG1.USBF0_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_RX_P has multiple names (Net Label USBG1_RX_P (4), Sheet Entry Grid USB3 part 1-USBG1.USBG1_RX_P(Passive), Sheet Entry USB control-USBG1.USBG1_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_TX_N has multiple names (Net Label USBG1_TX_N (4), Sheet Entry Grid USB3 part 1-USBG1.USBF0_TX_N(Passive), Sheet Entry USB control-USBG1.USBF0_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG1_TX_P has multiple names (Net Label USBG1_TX_P (4), Sheet Entry Grid USB3 part 1-USBG1.USBG1_TX_P(Passive), Sheet Entry USB control-USBG1.USBG1_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_5V has multiple names (Net Label USBG2_5V (2), Sheet Entry Grid USB3 part 2-USBG2.USBG2_5V(Passive), Sheet Entry USB control-USBG2.USBG2_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_CC1 has multiple names (Net Label USBG2_CC1 (2), Sheet Entry Grid USB3 part 2-USBG2.USBG2_CC(Passive), Sheet Entry USB control-USBG2.USBG2_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_CC2 has multiple names (Net Label USBG2_CC2 (2), Sheet Entry Grid USB3 part 2-USBG2.USBG2_SBU(Passive), Sheet Entry USB control-USBG2.USBG2_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_N has multiple names (Net Label USBG2_N (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_N(Passive), Sheet Entry USB control-USBG2.USBG2_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_P has multiple names (Net Label USBG2_P (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_P(Passive), Sheet Entry USB control-USBG2.USBG2_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_RX_N has multiple names (Net Label USBG2_RX_N (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_RX_N(Passive), Sheet Entry USB control-USBG2.USBG2_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_RX_P has multiple names (Net Label USBG2_RX_P (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_RX_P(Passive), Sheet Entry USB control-USBG2.USBG2_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_TX_N has multiple names (Net Label USBG2_TX_N (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_TX_N(Passive), Sheet Entry USB control-USBG2.USBG2_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBG2_TX_P has multiple names (Net Label USBG2_TX_P (4), Sheet Entry Grid USB3 part 2-USBG2.USBG2_TX_P(Passive), Sheet Entry USB control-USBG2.USBG2_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_5V has multiple names (Net Label USBPF_5V (2), Sheet Entry Framework Flex USB3-USBPF.USBPF_5V(Passive), Sheet Entry USB control-USBPF.USBPF_5V(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_CC1 has multiple names (Net Label USBPF_CC1 (2), Sheet Entry Framework Flex USB3-USBPF.USBPF_CC(Passive), Sheet Entry USB control-USBPF.USBPF_CC(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_CC2 has multiple names (Net Label USBPF_CC2 (2), Sheet Entry Framework Flex USB3-USBPF.USBPF_SBU(Passive), Sheet Entry USB control-USBPF.USBPF_SBU(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_N has multiple names (Net Label USBPF_N (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_N(Passive), Sheet Entry USB control-USBPF.USBPF_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_P has multiple names (Net Label USBPF_P (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_P(Passive), Sheet Entry USB control-USBPF.USBPF_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_RX_N has multiple names (Net Label USBPF_RX_N (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_RX_N(Passive), Sheet Entry USB control-USBPF.USBPF_RX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_RX_P has multiple names (Net Label USBPF_RX_P (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_RX_P(Passive), Sheet Entry USB control-USBPF.USBPF_RX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_TX_N has multiple names (Net Label USBPF_TX_N (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_TX_N(Passive), Sheet Entry USB control-USBPF.USBPF_TX_N(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Nets Wire USBPF_TX_P has multiple names (Net Label USBPF_TX_P (4), Sheet Entry Framework Flex USB3-USBPF.USBPF_TX_P(Passive), Sheet Entry USB control-USBPF.USBPF_TX_P(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">001_OverViewMainHub.SchDoc</td>
+<td class="column3">Unconnected Sheet Entry Power-+24V(Passive) at 4000mil,6900mil</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
