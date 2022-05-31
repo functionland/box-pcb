@@ -1,0 +1,527 @@
+*************************************************************
+FileName = P234_0.1_Grid2_GerberX2.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : GridMod2_Copper_Signal_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Layer 1
+      File : GridMod2_Copper_Signal_1.gbr
+
+    Adding Layer      : Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Layer 2
+      File : GridMod2_Copper_Signal_2.gbr
+
+    Adding Layer      : Layer 2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D14
+    D16
+    D17
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Layer 3
+      File : GridMod2_Copper_Signal_3.gbr
+
+    Adding Layer      : Layer 3
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Layer 4
+      File : GridMod2_Copper_Signal_4.gbr
+
+    Adding Layer      : Layer 4
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Layer 5
+      File : GridMod2_Copper_Signal_5.gbr
+
+    Adding Layer      : Layer 5
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D16
+    D17
+    D18
+    D19
+*************************************************************
+
+*************************************************************
+Generating : Layer 6
+      File : GridMod2_Copper_Signal_6.gbr
+
+    Adding Layer      : Layer 6
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : GridMod2_Copper_Signal_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D14
+    D16
+    D17
+    D18
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : GridMod2_Pads_Bot.gbr
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : GridMod2_Pads_Top.gbr
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : GridMod2_Legend_Bot.gbr
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D21
+    D22
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : GridMod2_Soldermask_Bot.gbr
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D24
+    D25
+    D26
+    D27
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : GridMod2_Legend_Top.gbr
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D21
+    D22
+    D28
+    D29
+    D30
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : GridMod2_Paste_Top.gbr
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : GridMod2_Paste_Bot.gbr
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : GridMod2_Soldermask_Top.gbr
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D25
+    D26
+    D27
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : GridMod2_Keep-out.gbr
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Value
+      File : GridMod2_Top_Value.gbr
+
+    Adding Layer      : Top Value
+
+
+Used DCodes :
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Board
+      File : GridMod2_Board.gbr
+
+    Adding Layer      : Board
+
+
+Used DCodes :
+    D21
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : GridMod2_Mechanical_1.gbr
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Board Shape
+      File : GridMod2_Board_Shape.gbr
+
+    Adding Layer      : Board Shape
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Value
+      File : GridMod2_Bottom_Value.gbr
+
+    Adding Layer      : Bottom Value
+
+
+Used DCodes :
+    D34
+*************************************************************
+
+*************************************************************
+Generating : Profile
+      File : GridMod2_Profile.gbr
+
+
+Used DCodes :
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Non-plated through-hole drill file
+      File : GridMod2_NPTH_Drill.gbr
+
+
+Used DCodes :
+    D36
+    D37
+*************************************************************
+
+*************************************************************
+Generating : Plated through-hole drill file
+      File : GridMod2_PTH_Drill.gbr
+
+
+Used DCodes :
+    D38
+    D39
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod2_Plated_Drill_1_3.gbr
+
+
+Used DCodes :
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod2_Plated_Drill_1_6.gbr
+
+
+Used DCodes :
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod2_Plated_Drill_3_8.gbr
+
+
+Used DCodes :
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod2_Plated_Drill_6_8.gbr
+
+
+Used DCodes :
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod2_Drawing_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod2_Drawing_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 2
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod2_Drawing_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 5
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod2_Drawing_4.gbr
+
+    Adding Drill Pair : Layer 2-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod2_Drawing_5.gbr
+
+    Adding Drill Pair : Layer 5-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod2_Drillmap_1.gbr
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod2_Drillmap_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 2
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod2_Drillmap_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 5
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod2_Drillmap_4.gbr
+
+    Adding Drill Pair : Layer 2-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod2_Drillmap_5.gbr
+
+    Adding Drill Pair : Layer 5-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D42
+*************************************************************
+
