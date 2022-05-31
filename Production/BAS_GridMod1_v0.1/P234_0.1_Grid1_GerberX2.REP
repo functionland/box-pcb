@@ -383,6 +383,41 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod1_Plated_Drill_1_3.gbr
+
+
+Used DCodes :
+    D57
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod1_Plated_Drill_1_6.gbr
+
+
+Used DCodes :
+    D57
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod1_Plated_Drill_3_8.gbr
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Blind or buried via drill file for drill pairs
+      File : GridMod1_Plated_Drill_6_8.gbr
+
+
+Used DCodes :
+    D57
+*************************************************************
+
+*************************************************************
 Generating : Drill Drawing
       File : GridMod1_Drawing_1.gbr
 
@@ -397,10 +432,112 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Drill Drawing
+      File : GridMod1_Drawing_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 2
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod1_Drawing_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 5
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod1_Drawing_4.gbr
+
+    Adding Drill Pair : Layer 2-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Drill Drawing
+      File : GridMod1_Drawing_5.gbr
+
+    Adding Drill Pair : Layer 5-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
 Generating : Drill Guide
       File : GridMod1_Drillmap_1.gbr
 
     Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod1_Drillmap_2.gbr
+
+    Adding Drill Pair : Top Layer-Layer 2
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod1_Drillmap_3.gbr
+
+    Adding Drill Pair : Top Layer-Layer 5
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod1_Drillmap_4.gbr
+
+    Adding Drill Pair : Layer 2-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : GridMod1_Drillmap_5.gbr
+
+    Adding Drill Pair : Layer 5-Bottom Layer
 
     Adding Layer      : Drill Guide
 

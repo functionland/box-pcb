@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: P234_0.1_Grid1_GerberX2.GBR   22/05/30  10:51:52 PM
+Gerber File Extension Report For: P234_0.1_Grid1_GerberX2.GBR   22/05/31  4:26:36 PM
 ------------------------------------------------------------------------------------------
 
 
@@ -30,6 +30,18 @@ Layer Extension     Layer Description
 .gbr                Profile                                 
 .gbr                Non-plated through-hole drill file      
 .gbr                Plated through-hole drill file          
+.gbr                Blind or buried via drill file for drill pairs
+.gbr                Blind or buried via drill file for drill pairs
+.gbr                Blind or buried via drill file for drill pairs
+.gbr                Blind or buried via drill file for drill pairs
 .gbr                Drill Drawing                           
+.gbr                Drill Drawing                           
+.gbr                Drill Drawing                           
+.gbr                Drill Drawing                           
+.gbr                Drill Drawing                           
+.gbr                Drill Guide                             
+.gbr                Drill Guide                             
+.gbr                Drill Guide                             
+.gbr                Drill Guide                             
 .gbr                Drill Guide                             
 ------------------------------------------------------------------------------------------
